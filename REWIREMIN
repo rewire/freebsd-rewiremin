@@ -1,191 +1,41 @@
-# /usr/src/sys/amd64/conf/GENERIC
+# /usr/src/sys/amd64/conf/REWIREMIN
 
 ident           GENERIC
 cpu             HAMMER
 
-device          aac                             # Adaptec FSA RAID
-device          aacp                            # SCSI passthrough for aac (requires CAM)
-device          aacraid                         # Adaptec by PMC RAID
+device          aacraid                         # ?? Adaptec by PMC RAID
 device          acpi                            
 device          adv                             # Advansys SCSI adapters
-device          adw                             # Advansys wide SCSI adapters
-device          ae                              # Attansic/Atheros L2 FastEthernet
-device          age                             # Attansic/Atheros L1 Gigabit Ethernet
-device          agp                             # support several AGP chipsets
-device          ahc                             # AHA2940 and onboard AIC7xxx devices
-device          ahci                            # AHCI-compatible SATA controllers
-device          ahd                             # AHA39320/29320 and onboard AIC79xx devices
-device          aic                             # Adaptec 15[012]x SCSI adapters, AIC-6[23]60.
-device          alc                             # Atheros AR8131/AR8132 Ethernet
-device          ale                             # Atheros AR8121/AR8113/AR8114 Ethernet
-device          amr                             # AMI MegaRAID
-device          an                              # Aironet 4500/4800 802.11 wireless NICs.
-device          arcmsr                          # Areca SATA II RAID
-device          ata                             # Legacy ATA/SATA controllers
-device          ath                             # Atheros NICs
-device          ath_hal                         # pci/cardbus chip support
-device          ath_pci                         # Atheros pci/cardbus glue
-device          ath_rate_sample                 # SampleRate tx rate control for ath
-device          atkbd                           # AT keyboard
-device          atkbdc                          # AT keyboard controller
-device          bce                             # Broadcom BCM5706/BCM5708 Gigabit Ethernet
-device          bfe                             # Broadcom BCM440x 10/100 Ethernet
-device          bge                             # Broadcom BCM570xx Gigabit Ethernet
 device          bpf                             # Berkeley packet filter
-device          bt                              # Buslogic/Mylex MultiMaster SCSI adapters
-device          bxe                             # Broadcom NetXtreme II BCM5771X/BCM578XX 10GbE
-device          cardbus                         # CardBus (32-bit) bus
-device          cas                             # Sun Cassini/Cassini+ and NS DP83065 Saturn
-device          cbb                             # cardbus (yenta) bridge
-device          cd                              # CD
-device          ch                              # SCSI media changers
-device          ciss                            # Compaq Smart RAID 5*
 device          cpufreq                         
-device          cs                              # Crystal Semiconductor CS89x0 NIC
+device          cs                              # ?? Crystal Semiconductor CS89x0 NIC
 device          da                              # Direct Access (disks)
-device          dc                              # DEC/Intel 21143 and various workalikes
-device          de                              # DEC/Intel DC21x4x (``Tulip'')
-device          dpt                             # DPT Smartcache III, IV - See NOTES for options
-device          ed                              # NE[12]000, SMC Ultra, 3c503, DS8390 cards
-device          ehci                            # EHCI PCI->USB interface (USB 2.0)
-device          em                              # Intel PRO/1000 Gigabit Ethernet Family
-device          ep                              # Etherlink III based cards
-device          esp                             # AMD Am53C974 (Tekram DC-390(T))
-device          et                              # Agere ET1310 10/100/Gigabit Ethernet
-device          ether                           # Ethernet support
-device          ex                              # Intel EtherExpress Pro/10 and Pro/10+
+device          ether                           # ?? Ethernet support
 device          faith                           # IPv6-to-IPv4 relaying (translation)
-device          fdc                             
-device          fe                              # Fujitsu MB8696x based cards
 device          firmware                        # firmware assist module
-device          fxp                             # Intel EtherExpress PRO/100B (82557, 82558)
-device          gem                             # Sun GEM/Sun ERI/Apple GMAC
 device          gif                             # IPv6 and IPv4 tunneling
-device          hme                             # Sun HME (Happy Meal Ethernet)
-device          hpt27xx                         # Highpoint RocketRAID 27xx
-device          hptiop                          # Highpoint RocketRaid 3xxx series
-device          hptmv                           # Highpoint RocketRAID 182x
-device          hptnr                           # Highpoint DC7280, R750
-device          hptrr                           # Highpoint RocketRAID 17xx, 22xx, 23xx, 25xx
-device          hyperv                          # HyperV drivers 
-device          ida                             # Compaq Smart RAID
-device          igb                             # Intel PRO/1000 PCIE Server Gigabit Family
-device          iir                             # Intel Integrated RAID
-device          ips                             # IBM (Adaptec) ServeRAID
-device          ipw                             # Intel 2100 wireless NICs.
-device          isci                            # Intel C600 SAS controller
-device          isp                             # Qlogic family
-device          iwi                             # Intel 2200BG/2225BG/2915ABG wireless NICs.
-device          iwn                             # Intel 4965/1000/5000/6000 wireless NICs.
-device          ix                              # Intel PRO/10GbE PCIE PF Ethernet
-device          ixl                             # Intel XL710 40Gbe PCIE Ethernet
-device          ixlv                            # Intel XL710 40Gbe VF PCIE Ethernet
-device          ixv                             # Intel PRO/10GbE PCIE VF Ethernet
-device          jme                             # JMicron JMC250 Gigabit/JMC260 Fast Ethernet
-device          kbdmux                          # keyboard multiplexer
-device          le                              # AMD Am7900 LANCE and Am79C9xx PCnet
-device          lge                             # Level 1 LXT1001 gigabit Ethernet
 device          loop                            # Network loopback
-device          lpt                             # Printer
-device          malo                            # Marvell Libertas wireless NICs.
 device          md                              # Memory "disks"
-device          mfi                             # LSI MegaRAID SAS
-device          miibus                          # MII bus support
-device          mlx                             # Mylex DAC960 family
-device          mly                             # Mylex AcceleRAID/eXtremeRAID
-device          mmc                             # MMC/SD bus
-device          mmcsd                           # MMC/SD memory card
-device          mpr                             # LSI-Logic MPT-Fusion 3
-device          mps                             # LSI-Logic MPT-Fusion 2
-device          mpt                             # LSI-Logic MPT-Fusion
-device          mrsas                           # LSI/Avago MegaRAID SAS/SATA, 6Gb/s and 12Gb/s
-device          msk                             # Marvell/SysKonnect Yukon II Gigabit Ethernet
-device          mvs                             # Marvell 88SX50XX/88SX60XX/88SX70XX/SoC SATA
-device          mwl                             # Marvell 88W8363 802.11n wireless NICs.
-device          nfe                             # nVidia nForce MCP on-board Ethernet
-device          nge                             # NatSemi DP83820 gigabit Ethernet
-device          nvd                             # expose NVMe namespaces as disks, depends on nvme
-device          nvme                            # base NVMe driver
-device          ohci                            # OHCI PCI->USB interface
 device          padlock_rng                     # VIA Padlock RNG
 device          pass                            # Passthrough device (direct ATA/SCSI access)
-device          pccard                          # PC Card (16-bit) bus
-device          pci                             
-device          pcn                             # AMD Am79C97x PCI 10/100 (precedence over 'le')
+device          pci                             # ??
 device          ppbus                           # Parallel port bus (required)
-device          ppc                             
-device          ppi                             # Parallel port interface device
-device          psm                             # PS/2 mouse
-device          puc                             # Multi I/O cards and multi-channel UARTs
-device          ral                             # Ralink Technology RT2500 wireless NICs.
+device          ppi                             # ?? Parallel port interface device
 device          random                          # Entropy device
 device          rdrand_rng                      # Intel Bull Mountain RNG
-device          re                              # RealTek 8139C+/8169/8169S/8110S
-device          rl                              # RealTek 8129/8139
-device          sa                              # Sequential Access (tape etc)
 device          sc                              
 device          scbus                           # SCSI bus (required for ATA/SCSI)
-device          sdhci                           # Generic PCI SD Host Controller
-device          ses                             # Enclosure Services (SES and SAF-TE)
-device          sf                              # Adaptec AIC-6915 (``Starfire'')
-device          sge                             # Silicon Integrated Systems SiS190/191
-device          siis                            # SiliconImage SiI3124/SiI3132/SiI3531 SATA
-device          sis                             # Silicon Integrated Systems SiS 900/SiS 7016
-device          sk                              # SysKonnect SK-984x & SK-982x gigabit Ethernet
-device          sn                              # SMC's 9000 series of Ethernet chips
-device          snd_cmi                         # CMedia CMI8338/CMI8738
-device          snd_csa                         # Crystal Semiconductor CS461x/428x
-device          snd_emu10kx                     # Creative SoundBlaster Live! and Audigy
-device          snd_es137x                      # Ensoniq AudioPCI ES137x
-device          snd_hda                         # Intel High Definition Audio
-device          snd_ich                         # Intel, NVidia and other ICH AC'97 Audio
-device          snd_via8233                     # VIA VT8233x Audio
-device          sound                           # Generic sound driver (required)
-device          splash                          # Splash screen and screen saver support
-device          ste                             # Sundance ST201 (D-Link DFE-550TX)
-device          stge                            # Sundance/Tamarack TC9021 gigabit Ethernet
-device          sym                             # NCR/Symbios Logic (newer chipsets + those of `ncr')
-device          ti                              # Alteon Networks Tigon I/II gigabit Ethernet
-device          tl                              # Texas Instruments ThunderLAN
-device          trm                             # Tekram DC395U/UW/F DC315U adapters
 device          tun                             # Packet tunnel.
-device          twa                             # 3ware 9000 series PATA/SATA RAID
-device          twe                             # 3ware ATA RAID
-device          tws                             # LSI 3ware 9750 SATA+SAS 6Gb/s RAID controller
-device          tx                              # SMC EtherPower II (83c170 ``EPIC'')
-device          txp                             # 3Com 3cR990 (``Typhoon'')
 device          uart                            # Generic UART driver
-device          uhci                            # UHCI PCI->USB interface
-device          ukbd                            # Keyboard
-device          umass                           # Disks/Mass storage - Requires scbus and da
 device          usb                             # USB Bus (required)
-device          vga                             # VGA video card driver
-device          vge                             # VIA VT612x gigabit Ethernet
+device          vga                             # ?? VGA video card driver
 device          virtio                          # Generic VirtIO bus (required)
 device          virtio_balloon                  # VirtIO Memory Balloon device
 device          virtio_blk                      # VirtIO Block device
 device          virtio_pci                      # VirtIO PCI device
 device          virtio_scsi                     # VirtIO SCSI device
 device          vlan                            # 802.1Q VLAN support
-device          vmx                             # VMware VMXNET3 Ethernet
-device          vr                              # VIA Rhine, Rhine II
-device          vt                              
 device          vtnet                           # VirtIO Ethernet device
-device          vt_efifb                        
-device          vt_vga                          
-device          vx                              # 3Com 3c590, 3c595 (``Vortex'')
-device          wb                              # Winbond W89C840F
-device          wi                              # WaveLAN/Intersil/Symbol 802.11 wireless NICs.
-device          wlan                            # 802.11 support
-device          wlan_amrr                       # AMRR transmit rate control algorithm
-device          wlan_ccmp                       # 802.11 CCMP support
-device          wlan_tkip                       # 802.11 TKIP support
-device          wlan_wep                        # 802.11 WEP support
-device          wpi                             # Intel 3945ABG wireless NICs.
-device          xe                              # Xircom pccard Ethernet
-device          xenpci                          # Xen HVM Hypervisor services driver
-device          xhci                            # XHCI PCI->USB interface (USB 3.0)
-device          xl                              # 3Com 3c90x (``Boomerang'', ``Cyclone'')
                                                 
 options         ACPI_DMAR                     
 options         AHC_REG_PRETTY_PRINT            # Print register bitfields in debug
@@ -198,21 +48,12 @@ options         AUDIT                           # Security event auditing
 options         CAPABILITIES                    # Capsicum capabilities
 options         CAPABILITY_MODE                 # Capsicum capability mode
 options         CD9660                          # ISO 9660 Filesystem
-options         COMPAT_FREEBSD32                # Compatible with i386 binaries
-options         COMPAT_FREEBSD4                 # Compatible with FreeBSD4
-options         COMPAT_FREEBSD5                 # Compatible with FreeBSD5
-options         COMPAT_FREEBSD6                 # Compatible with FreeBSD6
-options         COMPAT_FREEBSD7                 # Compatible with FreeBSD7
 options         DDB_CTF                         # Kernel ELF linker loads CTF data
 options         FFS                             # Berkeley Fast Filesystem
 options         GEOM_LABEL                      # Provides labelization
 options         GEOM_PART_GPT                   # GUID Partition Tables.
 options         GEOM_RAID                       # Soft RAID functionality.
 options         HWPMC_HOOKS                     # Necessary kernel hooks for hwpmc(4)
-options         HYPERV                          # Hyper-V kernel infrastructure
-options         IEEE80211_AMPDU_AGE             # age frames in AMPDU reorder q's
-options         IEEE80211_DEBUG                 # enable debug msgs
-options         IEEE80211_SUPPORT_MESH          # enable 802.11s draft support
 options         INCLUDE_CONFIG_FILE             # Include this file in kernel
 options         INET                            # InterNETworking
 options         INET6                           # IPv6 communications protocols
@@ -224,7 +65,6 @@ options         KDTRACE_HOOKS                   # Kernel DTrace hooks
 options         KTRACE                          # ktrace(1) support
 options         MAC                             # TrustedBSD MAC Framework
 options         MD_ROOT                         # MD is a potential root device
-options         MSDOSFS                         # MSDOS Filesystem
 options         NFSCL                           # New Network Filesystem Client
 options         NFSD                            # New Network Filesystem Server
 options         NFSLOCKD                        # Network Lock Manager
@@ -235,9 +75,6 @@ options         PROCDESC                        # Support for process descriptor
 options         PROCFS                          # Process filesystem (requires PSEUDOFS)
 options         PSEUDOFS                        # Pseudo-filesystem framework
 options         QUOTA                           # Enable disk quotas for UFS
-options         RACCT                           # Resource accounting framework
-options         RACCT_DEFAULT_TO_DISABLED       # Set kern.racct.enable=0 by default
-options         RCTL                            # Resource limits
 options         SCHED_ULE                       # ULE scheduler
 options         SCSI_DELAY=5000                 # Delay (in ms) before probing SCSI
 options         SCTP                            # Stream Control Transmission Protocol
@@ -252,9 +89,6 @@ options         TCP_OFFLOAD                     # TCP offload
 options         UFS_ACL                         # Support for access control lists
 options         UFS_DIRHASH                     # Improve performance on big directories
 options         UFS_GJOURNAL                    # Enable gjournal-based UFS journaling
-options         USB_DEBUG                       # enable debug msgs
-options         VESA                            # Add support for VESA BIOS Extensions (VBE)
-options         XENHVM                          # Xen HVM kernel infrastructure
 options         _KPOSIX_PRIORITY_SCHEDULING     # POSIX P1003_1B real-time extensions
                                                 
 makeoptions     DEBUG=-g                        # Build kernel with gdb(1) debug symbols
