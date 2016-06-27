@@ -93,3 +93,4 @@ options         UFS_ACL                         # Support for access control lis
 options         UFS_DIRHASH                     # Improve performance on big directories
 options         UFS_GJOURNAL                    # Enable gjournal-based UFS journaling
 options         _KPOSIX_PRIORITY_SCHEDULING     # POSIX P1003_1B real-time extensions
+
