@@ -7,10 +7,10 @@ makeoptions     DEBUG=-g                        # Build kernel with gdb(1) debug
 makeoptions     WITH_CTF=1                      # Run ctfconvert(1) for DTrace support
 
 device          aacraid                         # ?? Adaptec by PMC RAID
-device          acpi                            
+device          acpi
 device          adv                             # Advansys SCSI adapters
 device          bpf                             # Berkeley packet filter
-device          cpufreq                         
+device          cpufreq
 device          cs                              # ?? Crystal Semiconductor CS89x0 NIC
 device          da                              # Direct Access (disks)
 device          ether                           # ?? Ethernet support
@@ -26,7 +26,7 @@ device          ppbus                           # Parallel port bus (required)
 device          ppi                             # ?? Parallel port interface device
 device          random                          # Entropy device
 device          rdrand_rng                      # Intel Bull Mountain RNG
-device          sc                              
+device          sc
 device          scbus                           # SCSI bus (required for ATA/SCSI)
 device          tun                             # Packet tunnel.
 device          uart                            # Generic UART driver
@@ -39,8 +39,8 @@ device          virtio_pci                      # VirtIO PCI device
 device          virtio_scsi                     # VirtIO SCSI device
 device          vlan                            # 802.1Q VLAN support
 device          vtnet                           # VirtIO Ethernet device
-                                                
-options         ACPI_DMAR                     
+
+options         ACPI_DMAR
 options         AHC_REG_PRETTY_PRINT            # Print register bitfields in debug
 options         AHD_REG_PRETTY_PRINT            # Print register bitfields in debug
 options         AH_AR5416_INTERRUPT_MITIGATION  # AR5416 interrupt mitigation
