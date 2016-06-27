@@ -3,6 +3,9 @@
 ident           GENERIC
 cpu             HAMMER
 
+makeoptions     DEBUG=-g                        # Build kernel with gdb(1) debug symbols
+makeoptions     WITH_CTF=1                      # Run ctfconvert(1) for DTrace support
+
 device          aacraid                         # ?? Adaptec by PMC RAID
 device          acpi                            
 device          adv                             # Advansys SCSI adapters
@@ -90,6 +93,3 @@ options         UFS_ACL                         # Support for access control lis
 options         UFS_DIRHASH                     # Improve performance on big directories
 options         UFS_GJOURNAL                    # Enable gjournal-based UFS journaling
 options         _KPOSIX_PRIORITY_SCHEDULING     # POSIX P1003_1B real-time extensions
-                                                
-makeoptions     DEBUG=-g                        # Build kernel with gdb(1) debug symbols
-makeoptions     WITH_CTF=1                      # Run ctfconvert(1) for DTrace support
