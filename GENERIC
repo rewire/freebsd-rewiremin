@@ -1,4 +1,9 @@
 cpu    HAMMER
+ident    GENERIC
+
+makeoptions  DEBUG=-g    # Build kernel with gdb(1) debug symbols
+makeoptions  WITH_CTF=1    # Run ctfconvert(1) for DTrace support
+
 device    aac      # Adaptec FSA RAID
 device    aacp      # SCSI passthrough for aac (requires CAM)
 device    aacraid      # Adaptec by PMC RAID
@@ -182,9 +187,7 @@ device    xe      # Xircom pccard Ethernet
 device    xenpci      # Xen HVM Hypervisor services driver
 device    xhci      # XHCI PCI->USB interface (USB 3.0)
 device    xl      # 3Com 3c90x (``Boomerang'', ``Cyclone'')
-ident    GENERIC
-makeoptions  DEBUG=-g    # Build kernel with gdb(1) debug symbols
-makeoptions  WITH_CTF=1    # Run ctfconvert(1) for DTrace support
+
 options   ACPI_DMAR
 options   AHC_REG_PRETTY_PRINT  # Print register bitfields in debug
 options   AHD_REG_PRETTY_PRINT  # Print register bitfields in debug
